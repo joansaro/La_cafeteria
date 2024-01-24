@@ -273,9 +273,12 @@ main .sobre-nosotros{
 
 .datos-contacto{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
     font-weight: bold;
+    width: 50%;
+
 }
 
 
@@ -283,6 +286,7 @@ main .sobre-nosotros{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 50%;
 }
 
 .datos-contacto img{
@@ -301,4 +305,48 @@ footer{
     padding: 30px 0;
     color: #fff;
     text-align: center;
+}
+
+
+
+@media screen and (width <= 800px) {
+    .textos-header h1{
+        font-size: 100px;
+    }
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagen-about-us{
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    .contenedor-contacto{
+        width: 100%
+    }
+
+    .mapa{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .datos-contacto{
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        align-items: flex-start;
+    }
+
+    .dato-contacto{
+        width: 90%;
+        padding: 20px;
+
+    }
 }
